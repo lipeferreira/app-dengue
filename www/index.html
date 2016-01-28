@@ -68,14 +68,45 @@
         <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
     </head>
 
-    <body>
+    <body style="background-image:url(images/fundo_tela1.png)">
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
         <div class="upage" id="mainpage">
             <div class="upage-outer content-area vertical-col left">
-                <div id="home" class="upage-content vertical-col left "></div>
-                <div id="denuncia" class="upage-content vertical-col left hidden"></div>
+                <div id="home" class="upage-content vertical-col left ">
+                    <div id="fundo" >
+                        <img id="img-logo" src="images/logo_app.png">    
+                    </div>
+                    <div id="conteudo">
+                        <div class="item-menu">
+                            <a href="#denuncia">
+                                <img class="img-btn" src="images/btn_foco.png" >
+                            </a>
+                        </div>
+                        <div class="item-menu">
+                            <a href="#sintomas">
+                                <img class="img-btn" src="images/btn_sintomas.png" >
+                            </a>
+                        </div>
+                        <div class="item-menu">
+                            <a href="#servicos">
+                                <img class="img-btn" src="images/btn_servicos.png" >
+                            </a>
+                        </div>
+                        <div class="item-menu">
+                            <a href="#checklist">
+                                <img class="img-btn" src="images/btn_foco.png" >
+                            </a>
+                        </div>             
+                    </div>
+                    <div id="rodape">
+                        <img id="img-parceiro" src="images/logos_parceiros.png">
+                   </div>
+                </div>
+                <div id="denuncia" class="upage-content vertical-col left hidden">
+                    
+                </div>
                 <div id="formulario" class="upage-content vertical-col left hidden"></div>
                 <div id="sintomas" class="upage-content vertical-col left hidden"></div>
                 <div id="servicos" class="upage-content vertical-col left hidden"></div>
@@ -86,3 +117,18 @@
     </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
