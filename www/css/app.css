@@ -42,6 +42,7 @@ body {
     background: white ;
     color: black ;
     background-size: 100%;
+    max-width: 100%;
 }
 
 #fundo{
@@ -77,15 +78,28 @@ topo{
    float: left;
 }
 
-.item-menu:nth-child(even){
-		margin-left: 0;
+ul{
+    list-style: none;
 }
 
-.item-menu:last-child{
-	margin-right: 0;
+li{
+    float: left;   
 }
+
 
 .img-btn{
     width: 60%;
     height: 60%;
+}
+
+/*CSS da tela denuncia*/
+#foto{
+	width: 100%;
+	
+}
+
+#img-camera{
+	margin: 60% 0% 0% 30%;
+	width: 40%;
+	height: 40%;
 }
