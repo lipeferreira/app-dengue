@@ -283,6 +283,7 @@ input.toggle + label:after {
 body#afui .splt {
   width: 200px;
 }
+<<<<<<< HEAD
 .uib-header-fixed {
   position: fixed !important;
   top: 0;
@@ -385,11 +386,48 @@ body#afui .splt {
 @media all {
   .header-bg {
     background-color: #666666;
+=======
+.figure-align {
+  display: table;
+  margin: 0px auto;
+}
+.figure-align img {
+  width: 100%;
+}
+.image-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media all {
+  .wrapping-col > .d-margins,
+  .wrapping-col > .afScrollPanel > .d-margins {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .wrapping-col > .d-margins,
+  .wrapping-col > .afScrollPanel > .d-margins {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .d-margins {
+    margin-bottom: 10px;
+  }
+}
+@media all {
+  .scale-image img {
+    width: 200px;
+  }
+}
+@media all {
+  .bar-bg {
+    background-color: #dadada;
+>>>>>>> 0935bc9526b7f6da6ad0493ca132812ebf54ebe1
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
 }
+<<<<<<< HEAD
 .button-icon-top {
   display: block;
   margin: auto;
@@ -430,4 +468,24 @@ body#afui .splt {
 .image-cell {
   display: table-cell;
   vertical-align: middle;
+=======
+@media all {
+  .thumb-bg > .sidebar-thumb {
+    background-image: url('../sidebar/css/images/gripper.png');
+  }
+  .thumb-bg > .sidebar-thumb {
+    background-color: ;
+  }
+  .thumb-bg > .sidebar-thumb:hover,
+  .thumb-bg > .sidebar-thumb:active {
+    background-color: #eeeeee;
+  }
+}
+@media all {
+  .bar-gutter .sidebar-content > .grid-pad {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+>>>>>>> 0935bc9526b7f6da6ad0493ca132812ebf54ebe1
 }

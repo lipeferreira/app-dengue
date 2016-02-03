@@ -6,7 +6,11 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
       "projectGuid": "6c7db384-6f79-4820-a2ba-a366bcd308c0",
+<<<<<<< HEAD
       "lastModifiedDate": 1453409860665,
+=======
+      "lastModifiedDate": 1454003366469,
+>>>>>>> 0935bc9526b7f6da6ad0493ca132812ebf54ebe1
       "creationDate": 1453398255682
     },
     "XDK-app-designer": "true",
