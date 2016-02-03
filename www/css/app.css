@@ -41,4 +41,50 @@ body {
     /* margin: 0.5rem ; */
     background: white ;
     color: black ;
+    font-family: sans-serif;
+}
+
+.page-title{
+    text-align: center
+}
+
+#form-de-envio{
+    width: 100%;
+    margin: 0;
+}
+
+#form-de-envio > label{
+    width: 30%;
+    float: left;
+    margin: 0 5px 7px 5px;
+    text-align: right;
+    font-size: 1.3em;
+}
+
+#form-de-envio > input[type="text"]{
+    width: 65%;
+   
+    margin: 0 5px 7px 0;
+}
+
+#form-de-envio > input[type="number"]{
+    width: 65%;
+  
+    margin: 0 5px 7px 0;
+}
+
+#form-de-envio > input[type="email"]{
+    width: 65%;
+  
+    margin: 0 5px 7px 0;
+}
+
+#form-de-envio > input{
+   height: 2em;
+}
+
+#form-de-envio > input[type="button"]{
+    width: 100%;
+    height: 3em;
+    margin: 0 auto;
 }
