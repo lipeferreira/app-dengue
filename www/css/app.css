@@ -41,7 +41,6 @@ body {
     /* margin: 0.5rem ; */
     background: white ;
     color: black ;
-<<<<<<< HEAD
     font-family: sans-serif;
 }
 
@@ -88,7 +87,6 @@ body {
     width: 100%;
     height: 3em;
     margin: 0 auto;
-=======
     background-size: 100%;
     max-width: 100%;
 }
@@ -150,5 +148,5 @@ li{
 	margin: 60% 0% 0% 30%;
 	width: 40%;
 	height: 40%;
->>>>>>> 0935bc9526b7f6da6ad0493ca132812ebf54ebe1
+
 }
