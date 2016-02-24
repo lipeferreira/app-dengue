@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" href="css/jquery.mobile.structure.css" />
+        <link rel="stylesheet" href="css/mobile.min.css">
+		<link rel="stylesheet" href="css/estilo.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/fastClick.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/mapa.js"></script>
+        <script>
+            function onBodyLoad(){       
+                document.addEventListener("deviceready", onDeviceReady, false);
+            
+            }
+            
+            function onDeviceReady(){
+                var attachFastClick = Origami.fastclick;
+                attachFastClick(document.body);
+            }
+            
+            $(function(){
+                onBodyLoad();
+                onDeviceReady();
+            });
+        </script>
+	</head>
+	<body onload="navigator.geolocation.getCurrentPosition(onSuccessGeo, onErrorGeo);">
+        
+         <!--Pagina inicial-->
+		<div data-role="page" id="home">
+			<div data-role="header">
+                <img id="img-logo" src="img/logo_app.png">
+            </div>
+            <div id="conteudo" data-role="content">
+                <ul>
+                    <li>
+                        <div class="item-menu">
+                            <a href="#denuncia" data-transition="fade" onclick="testa();">
+                                <img class="img-btn" src="img/btn_foco.png">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-menu">
+                            <a href="sintomas.html" data-transition="fade" rel="external">
+                                <img class="img-btn" src="img/btn_sintomas.png">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-menu">
+                            <a href="#servicos" data-transition="fade" onclick="carregaServicos();">
+                                <img class="img-btn" src="img/btn_servicos.png">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-menu">
+                            <a href="cuidados.html" data-transition="slide" rel="external">
+                                 <img class="img-btn" src="img/btn_cuidado.png">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div data-role="footer" align="center">
+                <img id="img-parceiro" src="img/brasao_amapa_branco.png">
+                
+            </div>
+            <div align="center" class="texto">
+                SALA DE SITUAÇÃO ESTADUAL DE COMBATE AO AEDES
+            </div>
+		</div>
+        <!--fim da pagina inicial-->
+        
+        <!--pagina denuncia-->
+		<div data-role="page" id="denuncia" class="background-cuidados">
+	       <div id="foto">
+               <img id="img-camera" src="img/btn_foto.png" onclick="captureCamera();">
+            </div>
+           
+		</div>
+        <!--fim da pagina denuncia -->
+        
+        <!--pagina sintomas-serviccos-->
+        <div data-role="page" id="servicos" class="background-sintomas">
+           <div id="sint-febre">
+                 <div id="tit-ubs">UNIDADES <br /> HOSPITALARES </div>  <br />
+                      <ul id="ul-ubs">
+                          <!--li><b>UBS -</b> PEDRO BARROS MONTEIRO <b>(FAZENDINHA) <br /> HORÁRIO: 7h às 00h</b></li> <br /> <br />
+                          <li><b>UBS -</b> PERPÉTUO SOCORRO<b> <br /> HORÁRIO: 7H às 00h</b></li><br /><br />
+                          <li><b>UBS -</b> LÉLIO SILVA <b>(BURITIZAL) <br /> HORÁRIO: 24h(P.A)</b></li><br /><br /> 
+                          <li><b>UBS -</b> RUBIN BRITO ARONOVITCH <b>(SANTA INÊS) <br /> HORÁRIO: 7h às 00h</b></li><br /><br />
+                          <li><b>UBS -</b> CONGÓS<b> <br /> HORÁRIO: 7h às 00h</b></li><br /><br />
+                          <li><b>UBS -</b> MARCELO CANDIA <b>(JARDIM FELICIDADE II) <br /> HORÁRIO: 24h (UPA)</b></li><br /><br />
+                          <li><b>UBS -</b> CONCEIÇÃO ROSA MOITA <b>(NOVA ESPERANÇA) <br /> HORÁRIO: 7h às 18h</b></li><br /><br />
+                          <li><b>UBS -</b> ÁLVARO PEREIRA CORRÊA <b>(SÃO LÁZARO) <br /> HORÁRIO: 7h às 18h</b></li><br /><br />
+                          <li><b>UBS -</b> SÃO PEDRO <b>(BEIROL) <br /> HORÁRIO: 7h às 18h</b></li><br /><br />
+                          <li><b>UBS -</b> RAIMUNDO HOZANAN <b>(MUCA) <br /> HORÁRIO: 7h às 18h</b></li><br /><br />
+                          <li><b>UBS -</b> BRASIL NOVO <b> <br /> HORÁRIO: 7h às 18h</b></li><br /><br />
+                          <li><b>UBS -</b> LEOZILDO BARRETO FONTOURA<b> (MARCO ZERO) <br /> HORÁRIO: 7h às 18h</b></li>
+                          <li><b>UBS -</b> PEDRINHAS<b> <br /> HORÁRIO: 7h às 18h</b></li-->
+                     </ul>
+                   </div>  
+                 </div>
+         <!--fim da pagina servicos-->
+         <div class="cancela">
+            
+        </div>
+         <!--pagina formulario -->
+        <div data-role="page" id="formulario">
+           <div id="corpo-formulario">
+            <!--form id="form-denuncia" class="form-enviar" method="post" action="http://importadoragt.com.br/app/detona/paginas/nova-denuncia.php"-->
+            <form id="form-denuncia" class="form-enviar">
+                <br />
+                   <div id="titulo-formulario" data-role="header" align="center">
+                        DENÚNCIA DE FOCOS    
+                   </div>
+                  
+                <input type="hidden" name="imagem" id="imagem">
+                <input type="hidden" name="latitude" id="latitude">
+                <input type="hidden" name="longitude" id="longitude">
+                <table class="table-form">
+                <tr>
+                    <td class="coluna-esq" class="coluna-esq">NOME:</td class="coluna-esq">
+                    <td class="coluna-esq"><input type="text" class="input-text" name="nome" id="nome"></td class="coluna-esq">
+                </tr>
+                <tr>
+                    <td class="coluna-esq" class="coluna-esq">LOGRADOURO:</td class="coluna-esq">
+                    <td class="coluna-esq"><input type="text" class="input-text" name="logradouro" id="logradouro"></td class="coluna-esq">
+                </tr>
+                <tr>
+                    <td class="coluna-esq" class="coluna-esq">NÚMERO:</td class="coluna-esq">
+                    <td class="coluna-esq"><input type="number" class="input-text" name="numero" id="numero"></td class="coluna-esq">
+                </tr>
+                <tr>
+                    <td class="coluna-esq" class="coluna-esq">BAIRRO:</td class="coluna-esq">
+                    <td class="coluna-esq"><input type="text" class="input-text" name="bairro" id="bairro"></td class="coluna-esq">
+                </tr>
+                <tr>
+                    <td class="coluna-esq" class="coluna-esq">CIDADE:</td class="coluna-esq">
+                    <td class="coluna-esq"><input type="text" class="input-text" name="cidade" id="cidade"></td class="coluna-esq">
+                </tr>
+                <tr>
+                    <td class="coluna-esq" class="coluna-esq">EMAIL:</td class="coluna-esq">
+                    <td class="coluna-esq"><input type="email" class="input-text" name="email" id="email"></td class="coluna-esq">
+                </tr>
+                <tr>
+                    <td class="coluna-esq" class="coluna-esq">CELULAR:</td class="coluna-esq">
+                    <td class="coluna-esq"><input type="text" class="input-text" name="celular" id="celular"></td class="coluna-esq">
+                </tr>
+                <tr>
+                    <td class="coluna-esq" class="coluna-esq">OBSERVAÇÃO:</td class="coluna-esq">
+                    <td class="coluna-esq"><textarea name="observacao" id="observacao" cols="30" rows="10"></textarea></td class="coluna-esq">
+                </tr>
+                <tr>
+                    <!--td class="coluna-esq" colspan="2"><input type="submit" value="Enviar"></td class="coluna-esq"-->
+                    <td colspan="2"><input type="button" value="Enviar" onclick="enviarForm();"></td class="coluna-esq">
+                </tr>
+                </table>       
+            </form>
+            
+           </div>  
+        </div>
+         <!--fim da pagina formulario-->
+        
+            <!--mensagens de erro-->
+        <div data-role="page" id="erro-geo">
+            <div class="box">
+                <img src="img/Green.png">
+            </div>
+            
+            <p class="h1">Ops</p>
+            <p>
+                Você parece estar offline, verifique sua conexão com a internet e se seu GPS está ativo antes de tentar novamente.
+            </p>
+        </div>
+        
+        <div data-role="page" id="erro-servidor">
+            <div class="box">
+                <img src="img/Red.png">
+            </div>
+            
+            <p class="h1">Ops</p>
+            <p id="mensagem">
+                
+            </p>
+        </div>
+        
+    
+        <div data-role="page" id="erro-outro">
+            <div class="box">
+                <img src="img/Red.png">
+            </div>
+            
+            <p class="h1">Ops</p>
+            <p>
+                Infelizmente ocorreu um erro, estamos trabalhando para resolvê-lo. Por favor tente novamente em alguns instantes.
+            </p>
+        </div>
+        
+        <div data-role="page" id="mapa">
+            <div id="mapa" style="width:100%; height: 80%;margin: 0;padding: 0;"></div>
+        </div>
+        
+         
+        
+        <script src="intelxdk.js"></script>        
+    <script src="cordova.js"></script>
+             
+    <script src="xhr.js"></script>              
+
+    <script src="js/app.js"></script>
+    <script src="js/init-app.js"></script>
+    <script src="js/init-dev.js"></script>
+        
+         <script>
+             var self = this;
+                       
+             function captureCamera(){
+                navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.DATA_URL});
+               
+                window.location = "#formulario";
+             }
+                
+             function onSuccess(imageData) {
+				$("#imagem").val("data:image/jpeg;base64," + imageData);
+               	
+			 }
+			
+			 function onFail(message) {
+                history.go(-1);
+				alert('Failed because: ' + message);
+                history.go(-1);
+			 }
+             
+             
+             function prepara(px, py){
+                  
+                  posX = px;
+                  posY = py;
+                   var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    //script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ4TxmOK2qaUK2zN_-dtBUeSjy9OEg5uM&amp;signed_in=true&amp;callback=initMap";
+                    script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyDJ4TxmOK2qaUK2zN_-dtBUeSjy9OEg5uM&amp;signed_in=true&amp&sensor=true_or_false&callback=initialize";
+                    $("body").append(script);
+                    window.location = "#mapa";
+                    
+                    
+             }
+                     
+             
+             function enviarForm(){
+                
+                 var dataForm = $("#form-denuncia").serialize();
+                 
+                 /*$.post("http://amapasemaedes.ap.gov.br/app/detona/paginas/nova-denuncia.php",dataForm).done(function(resposta){
+                     var res = resposta;
+                     if (resposta == "Sucesso"){
+                        alert("Denuncia enviada com sucesso");
+                            $("#imagem").val(null);
+                            $("#latitude").val(null);
+                            $("#longitude").val(null);
+                            $("#nome").val(null);
+                            $("#logradouro").val(null);
+                            $("#bairro").val(null);
+                            $("#cidade").val(null);
+                            $("#email").val(null);
+                            $("#celular").val(null);
+                            $("#observacao").val(null);
+                             $("load2").slideUp(300);
+                         history.go(-2);
+                     }else{
+                          $("load2").slideUp(1000);
+                         $("#mensagem").append(resposta);
+                         window.location = "#erro-servidor";
+                     }
+                 }).fail(function(){
+                      $("load2").slideUp(1000);
+                     window.location = "#erro-outro";
+                 }); */       
+              
+              
+                $.ajax({
+                    url : "http://amapasemaedes.ap.gov.br/app/detona/paginas/nova-denuncia.php",
+                    data : dataForm,
+                    method: 'POST',
+                    beforeSend: function(){
+                        $.mobile.loading( 'show' );
+                    },
+                    timeout: 10000
+                }).done(function(resposta){
+                     var res = resposta;
+                     if (resposta == "Sucesso"){
+                        alert("Denuncia enviada com sucesso");
+                            $("#imagem").val(null);
+                            $("#latitude").val(null);
+                            $("#longitude").val(null);
+                            $("#nome").val(null);
+                            $("#logradouro").val(null);
+                            $("#bairro").val(null);
+                            $("#cidade").val(null);
+                            $("#email").val(null);
+                            $("#celular").val(null);
+                            $("#observacao").val(null);
+                             $("load2").slideUp(300);
+                         history.go(-2);
+                     }else{
+                          $("load2").slideUp(1000);
+                         $("#mensagem").append(resposta);
+                         window.location = "#erro-servidor";
+                     }
+                 }).fail(function(){
+                      $("load2").slideUp(1000);
+                     window.location = "#erro-outro";
+                 });   
+             }
+             
+             function testa(){
+                
+                 if((latitude == null)||(longitude == null)){
+                     $("load1").hide();
+                     window.location = "#erro-geo";x
+                 }else{
+                     $.ajax({
+                         url: "https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&key=AIzaSyDJ4TxmOK2qaUK2zN_-dtBUeSjy9OEg5uM&amp",
+                         beforeSend: function(){
+                              $.mobile.loading( 'show' );
+                         },
+                         timeout: 10000
+                     }).done(function(res){
+                         var logradouro = res.results[0].address_components[1].long_name;
+                         var bairro = res.results[0].address_components[2].long_name;
+                         var cidade = res.results[0].address_components[3].long_name;
+                        
+                         $("#latitude").val(latitude);
+                         $("#longitude").val(longitude);
+                         $("#logradouro").val(logradouro);
+                         $("#bairro").val(bairro);
+                         $("#cidade").val(cidade);
+                         
+                         $("load1").hide();
+                         window.location = "#denuncia";
+                     }).fail(function(){
+                         $("load1").hide();
+                         window.location = "#erro-geo";
+                     });
+                 }
+                 
+                 
+                 /*$.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&key=AIzaSyDJ4TxmOK2qaUK2zN_-dtBUeSjy9OEg5uM&amp", function(res){
+                    var logradouro = res.results[0].address_components[1].long_name;
+                    var bairro = res.results[0].address_components[2].long_name;
+                    var cidade = res.results[0].address_components[3].long_name;
+                    
+                    $("#latitude").val(latitude);
+                    $("#longitude").val(longitude);
+                    $("#logradouro").val(logradouro);
+                    $("#bairro").val(bairro);
+                    $("#cidade").val(cidade);
+                });*/
+             }
+             
+               
+             
+             
+             var enderecos = [
+                    {
+                        lat: "-0.053405",
+                        lng: "-51.114255",
+                        nome: "UBS Pedro Barros Monteiro",
+                        morada1:"Av. Passagem Dona Marcia nº 445",
+                        morada2: "Distrito de Fazendinha",
+                        codPostal: "68903-197"  
+                    },
+                    {
+                        lat: "0.006855",
+                        lng: "-51.068987",
+                        nome: "UBS Pedrinhas",
+                        morada1:"Rua João de Castro Sussuarana, nº 207",
+                        morada2: "Bairro: Jardim Equatorial",
+                        codPostal: "68903-290"  
+                    },
+                    {
+                        lat: "0.022400", 
+                        lng: "-51.055556",
+                        nome: "UBS Rubin Brito Aronovitch",
+                        morada1:"Av. 06 de Setembro, nº 212",
+                        morada2: "Bairro: Santa Inês",
+                        codPostal: "68901-520"  
+                    },
+                    {
+                        lat: "0.012962", 
+                        lng: "-51.072090",
+                        nome: "UBS Raimundo Hozanan", 
+                        morada1:"Rua Hildemar Maia, nº 3710",
+                        morada2: "Bairro: Muca",
+                        codPostal: "68902-335"  
+                    },
+                    
+                    {
+                        lat: "0.022839", 
+                        lng: "-51.079429",
+                        nome: "UBS Lélio Silva",
+                        morada1:"Rua José da Silva Castro, nº 126",
+                        morada2: "Bairro: Novo Buritizal",
+                        codPostal: "68904-250"  
+                    },
+                    {
+                        lat: "0.058772",
+                        lng: "-51.102360",
+                        nome: "UBS Infraero II",
+                        morada1:"Av. Carlos Lins Cortês, nº 161",
+                        morada2: "Bairro: Infraero II",
+                        codPostal: "68906-970"  
+                    },
+                    {
+                        lat: "0.044979", 
+                        lng: "-51.049797",
+                        nome: "UBS Perpétuo Socorro",
+                        morada1:"Rua Rio Xingu, nº 278",
+                        morada2: "Bairro: Perpétuo Socorro",
+                        codPostal: "68905-560"  
+                    },
+                    {
+                        lat: "0.031822", 
+                        lng: "-51.082103",
+                        nome: "UBS Conceição Rosa Moita",
+                        morada1:"Av. Raimundo Pequilo Goes de Almeida, nº 294",
+                        morada2: "Bairro: Nova Esperança",
+                        codPostal: "68901610"  
+                    },
+                    {
+                        lat: "0.092498", 
+                        lng: "-51.064900",
+                        nome: "UBS Marcello Candia",
+                        morada1:"Rua Vereador Júlio Maria Pinto Pereira, nº 1329",
+                        morada2: "Bairro: Jardim Felicidade I",
+                        codPostal: "68909-000"  
+                    },
+                    {
+                        lat: "0.0752634", 
+                        lng: "-51.0560229",
+                        nome: "UBS Álvaro Pereira Correa",
+                        morada1:"Av. Armando Tupã, nº 110",
+                        morada2: "Bairro: São Lázaro",
+                        codPostal: "68908-560"  
+                    },
+                    {
+                        lat: "0.0168176", 
+                        lng: "-51.0614672",
+                        nome: "UBS São Pedro",
+                        morada1:"Rua Cel. Jovino Dinoá, nº 158",
+                        morada2: "Bairro: Beirol",
+                        codPostal: ""  
+                    },
+                    {
+                        lat: "0.0894407", 
+                        lng: "-51.0882921",
+                        nome: "UBS Brasil Novo",
+                        morada1:"Av. Abacatal, nº 177",
+                        morada2: "Bairro: Brasil Novo",
+                        codPostal: "68909-301"  
+                    },
+                    {
+                        lat:  "0.089859", 
+                        lng: "-51.051622",
+                        nome: "UBS Novo Horizonte",
+                        morada1:"Av. Álvaro Corrêa Barbosa, nº 2246",
+                        morada2: "Bairro: Novo Horizonte I",
+                        codPostal: "68909-815"  
+                    },
+                    {
+                        lat: "0.0113657", 
+                        lng: "-51.0869296",
+                        nome: "UBS Congós",
+                        morada1:"Av. Claudomiro de Moraes, nº 340",
+                        morada2: "Bairro: Congós",
+                        codPostal: "68904400"  
+                    },
+                    {
+                        lat: "0.0229464", 
+                        lng: "-51.1730082",
+                        nome: "UBS Coração",
+                        morada1:"Avenida Profa Neuza Amaral, Nº 1163",
+                        morada2: "Bairro: Vila do Coração",
+                        codPostal: "-"  
+                    },
+                    {
+                        lat: "0.0016486", 
+                        lng: "-51.0877223",
+                        nome: "UBS Leozildo Barreto Fontoura",
+                        morada1:"Rua Inspetor Aymorés, nº 191 ",
+                        morada2: "Bairro: Marco Zero",
+                        codPostal: "68903-290"  
+                    },
+                    {
+                        lat: "0.0509311", 
+                        lng: "-51.0422127",
+                        nome: "UBS Cidade Nova I",
+                        morada1:"Av. Beira Rio, esquina com Pedro Américo",
+                        morada2: "Bairro: Cidade Nova I",
+                        codPostal: ""  
+                    },
+                    {
+                        lat: "0.037680", 
+                        lng: "-51.128728",
+                        nome: "UBS Marabaixo II",
+                        morada1:"Rua 04",
+                        morada2: "Bairro: Marabaixo II",
+                        codPostal: "68909-870"  
+                    },
+                    {
+                        lat: "0.0519581", 
+                        lng: "-51.0540225",
+                        nome: "UBS Pacoval",
+                        morada1:"Rua General Rondon, nº 225",
+                        morada2: "Bairro: Pacoval",
+                        codPostal: "68908-181"  
+                    },
+                    {
+                        lat: "-0.116775",
+                        lng: "-51.2840606",
+                        nome: "Unidade Mista Mazagão",
+                        morada1:"Rua Presidente Getulho Vargas, nº 1274",
+                        morada2: "Orla de Mazagão",
+                        codPostal: "68940-000"  
+                    },
+                    {
+                        lat: "2.0418528", 
+                        lng: "-50.7905894",
+                        nome: "Unidade Mista Amapá",
+                        morada1:"Av. Guarani, nº 742",
+                        morada2: "Bairro: Nova Esperança",
+                        codPostal: "68950-000"  
+                    },
+                    {
+                        lat: "2.4945062", 
+                        lng: "-50.9495258",
+                        nome: "Unidade Mista Calçoene",
+                        morada1:"Av. Fab, nº 745",
+                        morada2: "Bairro: Liberdade",
+                        codPostal: "68960-000" 
+                    },
+                    {
+                        lat: "0.8571112",
+                        lng: "-51.1837799",
+                        nome: "Unidade Mista Ferreira Gomes",
+                        morada1:"Av. Luzia Serra Cavalcante, nº 774",
+                        morada2: "Bairro Centro",
+                        codPostal: "68915-000" 
+                    },
+                    {
+                        lat: "0.8995436", 
+                        lng: "-52.0057701",
+                        nome: "Unidade Mista Serra do Navio",
+                        morada1:"Rua Três Secundaria, nº 32",
+                        morada2: "Vila Intermediária",
+                        codPostal: "68948-000" 
+                    },
+                    {
+                        lat: "0.7787027", 
+                        lng: "-51.9512838",
+                        nome: "Unidade Mista Pedra Branca do Amapari",
+                        morada1:"Rua Francisco Dutra, nº 517",
+                        morada2: "Bairro: Centro",
+                        codPostal: "68945-000"  
+                    },
+                    {
+                        lat: "1.5062271", 
+                        lng: "-50.9128839",
+                        nome: "Unidade Mista Tartarugalzinho",
+                        morada1:"Rua Mãe Veronica, nº 768",
+                        morada2: "Bairro: Centro",
+                        codPostal: "68990-000"  
+                    },
+                    {
+                        lat: "-0.9264285", 
+                        lng: "-52.4256413",
+                        nome: "Unidade Mista Vitoria do Jarí",
+                        morada1:"Av. Ayrton Sena, nº 1180",
+                        morada2: "Bairro: Comercial",
+                        codPostal: "68924-000"  
+                    },
+                    
+                    ];
+             
+             function carregaServicos(){
+                 
+                    
+                    
+                    
+                    for (var i = 0; i < enderecos.length; i++){                  
+                        
+                        var html = "<li onclick='prepara("+enderecos[i].lat+", "+enderecos[i].lng+");'><p class='img-marcador'><img src='img/marker.png'></p><p class='text-endereco'>"+enderecos[i].nome+"<br />"+enderecos[i].morada1+"<br />"+enderecos[i].morada2+"</p></li>";
+                        $("#ul-ubs").append(html);
+                    }
+             }
+             
+             
+                 /*function inicioMap(posX, posY) {
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: posX, lng: posY},
+                        zoom: 16
+                    });
+                    var infoWindow = new google.maps.InfoWindow({map: map});
+              
+                 }*/
+                 
+               
+                    
+                    
+             
+             
+
+        </script>
+	</body>
+</html>
+

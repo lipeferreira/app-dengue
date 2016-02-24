@@ -1,0 +1,322 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-size: 100%;
+    background-repeat: no-repeat;
+    background: #2B4D49;
+}
+
+
+#home{
+    background-image: url('../img/fundo_tela1.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #226159;
+}
+
+#conteudo{
+    width: 100%;   
+    margin: 10% 0 0 -6%;    
+}
+
+#conteudo > ul >li{
+    width: 50%;
+    float: left;
+}
+
+.item-menu{
+    width: 100%;
+    height: auto;
+    
+}
+
+.texto{
+    font-size: .7em;
+    color: #fff;
+    font-weight: bold;
+}
+
+#img-logo{
+    width: 100%;
+    height: auto;
+}
+
+#img-parceiro{
+    width: 12%;
+    height: auto;
+    margin-top: -10%;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    float: left;   
+}
+
+
+.img-btn{
+    width: 80%;
+    height: auto;
+}
+
+/*CSS da tela denuncia*/
+#foto{
+	width: 100%;
+	
+}
+
+#img-camera{
+	margin: 60% 0% 0% 30%;
+	width: 40%;
+	height: auto;
+
+}
+
+/*css tela sintomas*/
+h1, h5{
+	margin-top: 47%;
+	line-height: 80%;
+}
+
+#ul-sint{
+	margin-top: -10px;
+	margin-left: 9%;
+    list-style: circle;
+}
+
+
+.det-sintomas{
+    font-size: 0.68em;
+    
+}
+
+.sub{
+    margin-top: -7%;
+    font-size: 1.5em;
+    font-weight: bold;
+    
+}
+#tit-ubs{
+    font-size: 1.6em;
+    color: #fff;
+    font-weight: bold;
+}
+
+#ul-ubs{
+    margin-top: -3%;
+    margin-left: -6%;
+    list-style: circle;
+    font-size: .58em;
+    color: #fff;
+}
+
+.form-enviar{
+  color: #fff;
+  font-size: .85em;
+  line-height: 100%;
+  background: #2B4D49;
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+.input-text{
+    background-color: #fff !important;
+    border-radius: 5px !important;
+    border-width: 1px !important;
+    border-style: none !important;
+}
+
+.enviar{
+    text-decoration: none !important;
+}
+
+
+
+
+.texto-img-cuidados{
+    color: #fff;
+    font-size: 1em;
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#btn-home{
+    text-align: center;
+       
+}
+
+.btn-panel{
+    width: 12%;
+    height: 12%;
+    background: #0eb5ee;
+    border-radius: 100px;
+}
+.center{
+    margin-top: 4%;
+    text-align: center;
+}
+
+.center-cuidado{
+    margin-top: 10%;
+    text-align: center;
+}
+
+@media (orientation: landscape) { 
+    #content {
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+    /* final spec */
+    transform: rotate(-90deg);
+    }
+
+}
+
+.background-cuidados{
+    background-image: url(../img/fundo_tela_dentro.png); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    }
+    
+.background-sintomas{
+    background-color: #2B4D49; 
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+
+#form-denuncia{
+    width: 100%;
+    height: 100%;
+}
+
+.table-form{
+    width: 100%;
+    margin: 0;
+
+   
+}
+
+.coluna-esq{
+    text-align: center;
+    background-color: #4E6F68;
+}
+
+
+#erro-geo{
+    background-color: #dfefef;
+    text-align: center;
+    color: #2f4f4f;
+}
+
+#erro-geo > p{
+    font-size: 1.3em;
+    width: 95;
+}
+
+#erro-geo > .h1{
+    /*marigin-top: 0!important;*/
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.box{
+    width: 55%;
+    margin: 3% auto;
+}
+
+.box > img{
+    max-width: 100%;
+    margin: 0;
+}
+
+#erro-servidor{
+    background-color: #fcc;
+    text-align: center;
+    color: #f00;
+}
+
+#erro-servidor > p{
+    font-size: 1.3em;
+    width: 95;
+}
+
+#erro-servidor > .h1{
+    /*marigin-top: 0!important;*/
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#erro-outro{
+    background-color: #fcc;
+    text-align: center;
+    color: #f00;
+}
+
+#erro-outro > p{
+    font-size: 1.3em;
+    width: 95;
+}
+
+#erro-outro > .h1{
+    /*marigin-top: 0!important;*/
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#ul-ubs{
+    list-style: none;
+}
+
+#ul-ubs > li{
+    font-size: 1.5em;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 2px;
+    margin-left: 0;
+}
+
+#ul-ubs > li > .img-marcador{
+    float: left;
+    display: block;
+    position: relative;
+}
+
+#ul-ubs > li > .text-endereco{
+   margin-left: 5px;
+}
+
+@media only screen and (width: 480px) and (height: 800px) and (orientation: portrait) {
+   #ul-ubs > li {
+      margin-left: 2%;
+  }
+    
+  .coluna-esq{
+      background-color:#4E6F68 ;
+  }
+
+  
+  .table-form{
+    width: 95%;
+    margin: 0% 2.5%;
+    font-size: 1.2em;
+   }
+   
+   #titulo-formulario{
+       font-size: 1.2em;
+       margin-bottom: 4%;
+   }
+   #tit-ubs{
+       margin-left: 1.5%;
+   }
+  
+}
