@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+        background-color: #2B4D49;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    
+    #ul-sint{
+	margin-top: -10px;
+	margin-left: 13%;
+    list-style: circle;
+}
+
+#sint-dengue, #sint-chi, #sint-zika, #sint-febre{
+    color: #fff;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 1em;
+    margin-top: -15%;
+}
+
+
+
+.sub{
+    margin-top: -7%;
+    font-size: 1.6em;
+   
+}
+
+
+li{
+    float: left;   
+}
+
+h3{
+    margin-top: 10px;
+}
+
+@media only screen and (width: 480px) and (height: 800px) and (orientation: portrait) {
+#ul-sint{
+	margin-top: -10px;
+	margin-left: 12%;
+    list-style: circle;
+}
+
+#sint-dengue, #sint-chi, #sint-zika, #sint-febre{
+    color: #fff;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 1.3em;
+
+}
+
+.det-sintomas{   
+    line-height: 100%;
+}
+
+.sub{
+    margin-top: -7%;
+    font-size: 1.7em;
+   
+}
+
+
+li{
+    float: left;   
+}
+
+h3{
+    margin-top: -10%;
+}
+
+</style>
+    
+    
+</head>
+<body class="background-sintomas">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div id="sint-dengue">
+          <br>
+                                        <h3>SINTOMAS</h3>
+                                        <b><div class="sub"> DENGUE</div></b> 
+                                        <div class="det-sintomas">
+                                        <b>Febre:</b> Alta(39º a 40º), que começa subitamente. <br /> <br />
+                                        <b>Dores:</b> Nos músculos, nas articulações, na cabeça e atrás dos olhos. <br /> <br />
+                                        <b>Manchas Vermelhas:</b> Sim, as vezes com coceira. <br /> <br />
+                                        <b>Atenção:</b> 
+                                        <ul id="ul-sint">
+                                                <li>Náuseas, vômitos e diarréia</li> <br />
+                                                <li>Dor abdominal intensa,</li><br />
+                                                <li>Vômitos persistentes,</li><br />
+                                                <li>Acúmulo de líquidos</li><br />
+                                                <li>tonturas</li><br />
+                                                <li>Aumento do fígado</li><br />
+                                                <li>Sangramento de mucosa</li><br />
+                                                <li>Letargia e/ou irritação</li><br />
+                                                <li>Aumento de hemotróficos, que pode estar associado a redução de plaquetas.</li><br />
+                                               
+                                        </ul> 
+                                        <br /> <br />
+                                        <b>Complicações:</b> pode haver complicações de órgãos como: pulmões, coração, fígado, rins e sistema nervoso
+
+                                        </div>  
+                                 </div>
+                    </div>
+            <div class="swiper-slide">
+                <div id="sint-chi">
+              
+                                        <h3>SINTOMAS</h3>
+                                        <b><div class="sub"> CHIKUNGUNYA</div></b>                                        
+                                        <div class="det-sintomas">
+                                        <b>Febre:</b> Alta(39º a 40º), que começa subitamente. <br /> <br />
+                                        <b>Dores:</b> Inchaço nas articulações e dores intensas, que dificultam atividades rotineiras (como cozinhar, tomar banho, escovar os dentes etc.) <br /> <br />
+                                        <b>Manchas Vermelhas:</b> Sim, com coceira intensa. <br /> <br />
+                                        <b>Atenção:</b> 
+                                        <ul id="ul-sint">
+                                                <li>Idade acima de 45 anos,</li> <br />
+                                                <li>Lesões prévias nas articulações,</li><br />
+                                                <li>Doenças crônicas, <br /> ex.: hipertensão, diabetes, ou autoimunes (ex: lupus)</li><br />
+                                                
+                                                
+                                       </ul> <br /> <br />
+                                        
+                                        <b>Complicações:</b> Persistência da dor por meses ou até anos em alguns casos, com queda da produtividade em população economicamente ativa (20-60 anos de idade).
+                                        <br><br><br><br>
+                                        </div> 
+                                </div>
+                                <br>
+            </div>
+            <div class="swiper-slide">
+                <div id="sint-zika">
+                  
+                                        <h3>SINTOMAS</h3>
+                                        <b><div class="sub"> ZIKA</div></b> 
+                                        <div class="det-sintomas">
+                                        <b>Febre:</b> Leve ou até mesmo ausente <br /> <br />
+                                        <b>Dores:</b> Dores menos intensas nas articulações, em geral nas extremidades, ás vezes acompanhadas de inchaços, olhos vermelhos e aversão a luz. <br /> <br />
+                                        <b>Manchas Vermelhas:</b> Sim, com coceira intensa. <br /> <br />
+                                        <ul id="ul-sint">
+                                                <li>Dormência nas extremidades</li> <br />
+                                                <li>Dificuldades para caminhar</li>
+                                                <li>Alterações neurológicas</li> <br /> <br />
+                                                <li>Paralisia Facial</li>
+                                                
+                                                
+                                        </ul> <br />
+                                        
+                                        <b>Complicações:</b> Comprometimento neurológico, que provoca debilidade muscular. Possibilidade de reação autoimune (Síndrome de Guillain Barré), que pode levar à paralisia cerebral. 
+
+                                        </div> 
+                                           <br><br><br><br>
+                                </div>
+                             
+            </div>
+            <div class="swiper-slide">
+                <div id="sint-febre">
+                  <br  /> 
+                                                <h3>SINTOMAS </h3>
+                                                
+                                                <b><div class="sub"> FEBRE AMARELA URBANA</div></b> 
+                                                
+                                                <div class="det-sintomas">
+                                                <b>Febre:</b> Alta(39º a 40º), que começa subitamente. <br /> <br />
+                                                <b>Dores:</b> Nos músculos, nas articulações, na cabeça e atrás dos olhos. <br /> <br />
+                                                <b>Manchas Vermelhas:</b> Sim, as vezes com coceira. <br /> <br />
+                                                <b>Atenção:</b> 
+                                                <ul id="ul-sint">
+                                                        <li>Náuseas, vômitos e diarréia</li> <br />
+                                                        <li>Dor abdominal intensa,</li><br />
+                                                        <li>Vômitos persistentes,</li><br />
+                                                        <li>Acúmulo de líquidos</li><br />
+                                                        <li>tonturas</li><br />
+                                                        <li>Aumento do fígado</li><br />
+                                                        <li>Sangramento de mucosa</li><br />
+                                                        <li>Letargia e/ou irritação</li><br />
+                                                        <li>Aumento de hemotróficos, que pode estar associado a redução de plaquetas.</li><br />
+                                                </ul> <br /> <br />
+                                                 
+                                                <b>Complicações:</b> pode haver Complicações de órgãos como: pulmões, coração, fígado, rins e sistema nervoso
+                                
+                                                </div>  
+                                        </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
+    </script>
+</body>
+</html>
