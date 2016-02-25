@@ -247,32 +247,7 @@
                 
                  var dataForm = $("#form-denuncia").serialize();
                  
-                 /*$.post("http://amapasemaedes.ap.gov.br/app/detona/paginas/nova-denuncia.php",dataForm).done(function(resposta){
-                     var res = resposta;
-                     if (resposta == "Sucesso"){
-                        alert("Denuncia enviada com sucesso");
-                            $("#imagem").val(null);
-                            $("#latitude").val(null);
-                            $("#longitude").val(null);
-                            $("#nome").val(null);
-                            $("#logradouro").val(null);
-                            $("#bairro").val(null);
-                            $("#cidade").val(null);
-                            $("#email").val(null);
-                            $("#celular").val(null);
-                            $("#observacao").val(null);
-                             $("load2").slideUp(300);
-                         history.go(-2);
-                     }else{
-                          $("load2").slideUp(1000);
-                         $("#mensagem").append(resposta);
-                         window.location = "#erro-servidor";
-                     }
-                 }).fail(function(){
-                      $("load2").slideUp(1000);
-                     window.location = "#erro-outro";
-                 }); */       
-              
+                
               
                 $.ajax({
                     url : "http://amapasemaedes.ap.gov.br/app/detona/paginas/nova-denuncia.php",
@@ -280,10 +255,9 @@
                     method: 'POST',
                     beforeSend: function(){
                         $.mobile.loading( 'show' );
-                    },
-                    timeout: 10000
+                    }
                 }).done(function(resposta){
-                     var res = resposta;
+                   
                      if (resposta == "Sucesso"){
                         alert("Denuncia enviada com sucesso");
                             $("#imagem").val(null);
@@ -296,15 +270,15 @@
                             $("#email").val(null);
                             $("#celular").val(null);
                             $("#observacao").val(null);
-                             $("load2").slideUp(300);
+                             
                          history.go(-2);
                      }else{
-                          $("load2").slideUp(1000);
+                          
                          $("#mensagem").append(resposta);
                          window.location = "#erro-servidor";
                      }
                  }).fail(function(){
-                      $("load2").slideUp(1000);
+                    
                      window.location = "#erro-outro";
                  });   
              }
@@ -341,17 +315,7 @@
                  }
                  
                  
-                 /*$.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&key=AIzaSyDJ4TxmOK2qaUK2zN_-dtBUeSjy9OEg5uM&amp", function(res){
-                    var logradouro = res.results[0].address_components[1].long_name;
-                    var bairro = res.results[0].address_components[2].long_name;
-                    var cidade = res.results[0].address_components[3].long_name;
-                    
-                    $("#latitude").val(latitude);
-                    $("#longitude").val(longitude);
-                    $("#logradouro").val(logradouro);
-                    $("#bairro").val(bairro);
-                    $("#cidade").val(cidade);
-                });*/
+                
              }
              
                
@@ -588,23 +552,7 @@
                         var html = "<li onclick='prepara("+enderecos[i].lat+", "+enderecos[i].lng+");'><p class='img-marcador'><img src='img/marker.png'></p><p class='text-endereco'>"+enderecos[i].nome+"<br />"+enderecos[i].morada1+"<br />"+enderecos[i].morada2+"</p></li>";
                         $("#ul-ubs").append(html);
                     }
-             }
-             
-             
-                 /*function inicioMap(posX, posY) {
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                        center: {lat: posX, lng: posY},
-                        zoom: 16
-                    });
-                    var infoWindow = new google.maps.InfoWindow({map: map});
-              
-                 }*/
-                 
-               
-                    
-                    
-             
-             
+             }             
 
         </script>
 	</body>
