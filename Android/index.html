@@ -68,12 +68,12 @@
                 </ul>
             </div>
 
-            <div data-role="footer" align="center">
+            <!--div data-role="footer" align="center">
                 <img id="img-parceiro" src="img/brasao_amapa_branco.png">
                 
-            </div>
+            </div-->
             <div align="center" class="texto">
-                SALA DE SITUAÇÃO ESTADUAL DE COMBATE AO AEDES
+                SALA DE SITUAÇÃO ESTADUAL <br />DE COMBATE AO AEDES
             </div>
 		</div>
         <!--fim da pagina inicial-->
@@ -285,9 +285,9 @@
              
              function testa(){
                 
-                 if((latitude == null)||(longitude == null)){
-                     $("load1").hide();
-                     window.location = "#erro-geo";x
+                 //if(((latitude == null) || (latitude = " "))||((longitude == null) || (longitude == " "))){
+                 if((latitude == null) || (longitude == null)){   
+                     window.location = "#erro-geo";
                  }else{
                      $.ajax({
                          url: "https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&key=AIzaSyDJ4TxmOK2qaUK2zN_-dtBUeSjy9OEg5uM&amp",
